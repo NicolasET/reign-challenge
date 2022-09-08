@@ -1,10 +1,15 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { MongooseModule } from '@nestjs/mongoose';
+import { ScheduleModule } from '@nestjs/schedule';
+import { NewsModule } from './news/news.module';
+import { CommonModule } from './common/common.module';
 
 @Module({
-  imports: [],
-  controllers: [AppController],
-  providers: [AppService],
+  imports: [
+    MongooseModule.forRoot('mongodb://localhost:27017/nest-news'),
+    ScheduleModule.forRoot(),
+    NewsModule,
+    CommonModule,
+  ],
 })
 export class AppModule {}
