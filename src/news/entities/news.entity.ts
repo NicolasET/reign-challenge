@@ -45,8 +45,8 @@ export class News extends Document {
   @Prop()
   _tags: null | string[];
 
-  @Prop()
-  objectID: null | string;
+  @Prop({ unique: true, required: true })
+  objectID: string;
 
   @Prop({ type: Object })
   _highlightResult: null | any;

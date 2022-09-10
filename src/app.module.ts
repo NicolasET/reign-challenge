@@ -3,6 +3,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { ScheduleModule } from '@nestjs/schedule';
 import { NewsModule } from './news/news.module';
 import { CommonModule } from './common/common.module';
+import { SeedModule } from './seed/seed.module';
 
 @Module({
   imports: [
@@ -10,6 +11,7 @@ import { CommonModule } from './common/common.module';
     ScheduleModule.forRoot(),
     NewsModule,
     CommonModule,
+    SeedModule,
   ],
 })
 export class AppModule {}

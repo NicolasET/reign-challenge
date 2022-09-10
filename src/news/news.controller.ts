@@ -12,7 +12,7 @@ import { NewsService } from './news.service';
 import { CreateNewsDto } from './dto/create-news.dto';
 import { UpdateNewsDto } from './dto/update-news.dto';
 import { ParseMongoIdPipe } from 'src/common/pipes/parse-mongo-id.pipe';
-import { PaginationDto } from 'src/common/dto/pagination.dto';
+import { FilterDto } from 'src/common/dto/filter.dto';
 
 @Controller('news')
 export class NewsController {
@@ -24,8 +24,8 @@ export class NewsController {
   }
 
   @Get()
-  findAll(@Query() paginationDto: PaginationDto) {
-    return this.newsService.findAll(paginationDto);
+  findAll(@Query() filterDto: FilterDto) {
+    return this.newsService.findAll(filterDto);
   }
 
   @Get(':id')

@@ -1,13 +1,18 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import {
+  Injectable,
+  NotFoundException,
+  BadRequestException,
+  InternalServerErrorException,
+} from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Cron, CronExpression } from '@nestjs/schedule';
 import { Model } from 'mongoose';
 import { CreateNewsDto } from './dto/create-news.dto';
 import { UpdateNewsDto } from './dto/update-news.dto';
 import { News } from './entities/news.entity';
-import { AlgoliaResponse } from './interfaces/algolia-response.interface';
+import { AlgoliaResponse } from '../common/interfaces/algolia-response.interface';
 import axios from 'axios';
-import { PaginationDto } from 'src/common/dto/pagination.dto';
+import { FilterDto } from 'src/common/dto/filter.dto';
 
 @Injectable()
 export class NewsService {
@@ -17,13 +22,25 @@ export class NewsService {
   ) {}
 
   async create(createNewsDto: CreateNewsDto) {
-    const news = await this.newsModel.create(createNewsDto);
-    return news;
+    try {
+      const news = await this.newsModel.create(createNewsDto);
+      return news;
+    } catch (error) {
+      this.handleException(error);
+    }
   }
 
-  async findAll(paginationDto: PaginationDto) {
-    const { limit = 5 } = paginationDto; //Pagination with 5 items as default
-    return await this.newsModel.find().limit(limit);
+  async findAll(filterDto: FilterDto) {
+    const { limit = 5 } = filterDto; //Pagination with 5 items as default
+    return await this.newsModel
+      .find({
+        ...(filterDto.title ? { title: filterDto.title } : {}),
+        ...(filterDto.author ? { author: filterDto.author } : {}),
+        ...(filterDto._tags
+          ? { _tags: { $in: filterDto._tags.split(',') } }
+          : {}),
+      })
+      .limit(limit);
   }
 
   async findOne(id: string) {
@@ -54,12 +71,25 @@ export class NewsService {
       'https://hn.algolia.com/api/v1/search_by_date?query=nodejs',
     );
     data.hits.forEach(async (news) => {
-      await this.create(news as CreateNewsDto);
+      const newNews = await this.newsModel.find({ objectID: news.objectID });
+      if (!newNews) await this.create(news); //If news don't exist create
     });
   }
 
   //Function to handle when an item is not found
   private newsDoesntExist() {
     throw new NotFoundException(`This news doesnt exist`);
+  }
+
+  private handleException(error: any) {
+    if (error.code === 11000) {
+      throw new BadRequestException(
+        `This news already exists in the db ${JSON.stringify(error.keyValue)}`,
+      );
+    }
+    console.log(error);
+    throw new InternalServerErrorException(
+      `Can't create News - Check server logs`,
+    );
   }
 }

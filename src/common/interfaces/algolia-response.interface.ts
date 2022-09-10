@@ -19,38 +19,38 @@ export interface Exhaustive {
 }
 
 export interface Hit {
-  created_at?: null | string;
-  title?: null | string;
-  url?: null | string;
-  author?: null | string;
-  points?: null | number;
-  story_text?: null | string;
-  comment_text?: null | string;
-  num_comments?: null | number;
-  story_id?: null | number;
-  story_title?: null | string;
-  story_url?: null | string;
-  parent_id?: null | number;
-  created_at_i?: null | number;
-  _tags?: null | string[];
-  objectID?: null | string;
-  _highlightResult?: null | HighlightResult;
+  created_at: null | string;
+  title: null | string;
+  url: null | string;
+  author: null | string;
+  points: null | number;
+  story_text: null | string;
+  comment_text: null | string;
+  num_comments: null | number;
+  story_id: null | number;
+  story_title: null | string;
+  story_url: null | string;
+  parent_id: null | number;
+  created_at_i: null | number;
+  _tags: null | string[];
+  objectID: null | string;
+  _highlightResult: null | HighlightResult;
 }
 
 export interface HighlightResult {
-  author?: Author;
-  comment_text?: Author;
-  story_title?: Author;
-  story_url?: Author;
-  title?: Author;
-  url?: Author;
+  author: Author;
+  comment_text: Author;
+  story_title: Author;
+  story_url: Author;
+  title: Author;
+  url: Author;
 }
 
 export interface Author {
   value: string;
   matchLevel: MatchLevel;
   matchedWords: Query[];
-  fullyHighlighted?: boolean;
+  fullyHighlighted: boolean;
 }
 
 export enum MatchLevel {
