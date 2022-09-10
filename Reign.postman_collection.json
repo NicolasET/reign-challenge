@@ -1,0 +1,205 @@
+{
+	"info": {
+		"_postman_id": "d876ec40-885a-4389-80a7-1649186a0f9a",
+		"name": "Reign",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17872646"
+	},
+	"item": [
+		{
+			"name": "POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"created_at\": \"2022-09-09T21:18:52.000Z\",\r\n        \"title\": null,\r\n        \"url\": null,\r\n        \"author\": \"rolph\",\r\n        \"points\": null,\r\n        \"story_text\": null,\r\n        \"comment_text\": \"MIT news:<p><a href=\\\"https:&#x2F;&#x2F;news.mit.edu&#x2F;2020&#x2F;atomic-clock-time-precise-1216\\\" rel=\\\"nofollow\\\">https:&#x2F;&#x2F;news.mit.edu&#x2F;2020&#x2F;atomic-clock-time-precise-1216</a><p>seems to be the better link, also reveals subject is a 2020 discovery, was also published in Nature:<p><a href=\\\"https:&#x2F;&#x2F;www.nature.com&#x2F;articles&#x2F;s41586-022-05088-z\\\" rel=\\\"nofollow\\\">https:&#x2F;&#x2F;www.nature.com&#x2F;articles&#x2F;s41586-022-05088-z</a>     [paywall]<p>&quot;Abstract<p>Optical atomic clocks are our most precise tools to measure time and frequency1,2,3. Precision frequency comparisons between clocks in separate locations enable one to probe the space–time variation of fundamental constants4,5 and the properties of dark matter6,7, to perform geodesy8,9,10 and to evaluate systematic clock shifts. Measurements on independent systems are limited by the standard quantum limit; measurements on entangled systems can surpass the standard quantum limit to reach the ultimate precision allowed by quantum theory—the Heisenberg limit. Although local entangling operations have demonstrated this enhancement at microscopic distances11,12,13,14,15,16, comparisons between remote atomic clocks require the rapid generation of high-fidelity entanglement between systems that have no intrinsic interactions. Here we report the use of a photonic link17,18 to entangle two 88Sr+ ions separated by a macroscopic distance19 (approximately 2 m) to demonstrate an elementary quantum network of entangled optical clocks. For frequency comparisons between the ions, we find that entanglement reduces the measurement uncertainty by nearly \\\\(\\\\sqrt{2}\\\\), the value predicted for the Heisenberg limit. Today’s optical clocks are typically limited by dephasing of the probe laser20; in this regime, we find that entanglement yields a factor of 2 reduction in the measurement uncertainty compared with conventional correlation spectroscopy techniques20,21,22. We demonstrate this enhancement for the measurement of a frequency shift applied to one of the clocks. This two-node network could be extended to additional nodes23, to other species of trapped particles or—through local operations—to larger entangled systems.<p>&quot;\",\r\n        \"num_comments\": null,\r\n        \"story_id\": 32780416,\r\n        \"story_title\": \"Two atomic clocks have been quantum entangled for the first time\",\r\n        \"story_url\": \"https://www.newscientist.com/article/2337042-two-atomic-clocks-have-been-quantum-entangled-for-the-first-time/\",\r\n        \"parent_id\": 32780416,\r\n        \"created_at_i\": 1662758332,\r\n        \"_tags\": [\r\n            \"comment\",\r\n            \"author_rolph\",\r\n            \"story_32780416\"\r\n        ],\r\n        \"objectID\": \"32785047\",\r\n        \"_highlightResult\": {\r\n            \"author\": {\r\n                \"value\": \"rolph\",\r\n                \"matchLevel\": \"none\",\r\n                \"matchedWords\": []\r\n            },\r\n            \"comment_text\": {\r\n                \"value\": \"MIT news:<p><a href=\\\"https://news.mit.edu/2020/atomic-clock-time-precise-1216\\\" rel=\\\"nofollow\\\">https://news.mit.edu/2020/atomic-clock-time-precise-1216</a><p>seems to be the better link, also reveals subject is a 2020 discovery, was also published in Nature:<p><a href=\\\"https://www.nature.com/articles/s41586-022-05088-z\\\" rel=\\\"nofollow\\\">https://www.nature.com/articles/s41586-022-05088-z</a>     [paywall]<p>&quot;Abstract<p>Optical atomic clocks are our most precise tools to measure time and frequency1,2,3. Precision frequency comparisons between clocks in separate locations enable one to probe the space–time variation of fundamental constants4,5 and the properties of dark matter6,7, to perform geodesy8,9,10 and to evaluate systematic clock shifts. Measurements on independent systems are limited by the standard quantum limit; measurements on entangled systems can surpass the standard quantum limit to reach the ultimate precision allowed by quantum theory—the Heisenberg limit. Although local entangling operations have demonstrated this enhancement at microscopic distances11,12,13,14,15,16, comparisons between remote atomic clocks require the rapid generation of high-fidelity entanglement between systems that have no intrinsic interactions. Here we report the use of a photonic link17,18 to entangle two 88Sr+ ions separated by a macroscopic distance19 (approximately 2 m) to demonstrate an elementary quantum network of entangled optical clocks. For frequency comparisons between the ions, we find that entanglement reduces the measurement uncertainty by nearly \\\\(\\\\sqrt{2}\\\\), the value predicted for the Heisenberg limit. Today’s optical clocks are typically limited by dephasing of the probe laser20; in this regime, we find that entanglement yields a factor of 2 reduction in the measurement uncertainty compared with conventional correlation spectroscopy techniques20,21,22. We demonstrate this enhancement for the measurement of a frequency shift applied to one of the clocks. This two-node network could be extended to additional <em>nodes</em>23, to other species of trapped particles or—through local operations—to larger entangled systems.<p>&quot;\",\r\n                \"matchLevel\": \"full\",\r\n                \"fullyHighlighted\": false,\r\n                \"matchedWords\": [\r\n                    \"nodejs\"\r\n                ]\r\n            },\r\n            \"story_title\": {\r\n                \"value\": \"Two atomic clocks have been quantum entangled for the first time\",\r\n                \"matchLevel\": \"none\",\r\n                \"matchedWords\": []\r\n            },\r\n            \"story_url\": {\r\n                \"value\": \"https://www.newscientist.com/article/2337042-two-atomic-clocks-have-been-quantum-entangled-for-the-first-time/\",\r\n                \"matchLevel\": \"none\",\r\n                \"matchedWords\": []\r\n            }\r\n        }\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:{{port}}/api/v1/news",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port}}",
+					"path": [
+						"api",
+						"v1",
+						"news"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:{{port}}/api/v1/news/",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port}}",
+					"path": [
+						"api",
+						"v1",
+						"news",
+						""
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "10",
+							"disabled": true
+						},
+						{
+							"key": "author",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "_tags",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "title",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ONE",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:{{port}}/api/v1/news/{{newsID}}",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port}}",
+					"path": [
+						"api",
+						"v1",
+						"news",
+						"{{newsID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    //What I want to update\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:{{port}}/api/v1/news/{{newsID}}",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port}}",
+					"path": [
+						"api",
+						"v1",
+						"news",
+						"{{newsID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:{{port}}/api/v1/news/{{newsID}}",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port}}",
+					"path": [
+						"api",
+						"v1",
+						"news",
+						"{{newsID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POPULATE DB (First time)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:{{port}}/api/v1/seed",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port}}",
+					"path": [
+						"api",
+						"v1",
+						"seed"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "newsID",
+			"value": ""
+		},
+		{
+			"key": "port",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
