@@ -1,7 +1,7 @@
 .vscode
-dist/
-mongo/
-node_modules/
+/dist
+/mongo
+/node_modules
 .env.template
 .gitignore
-.git/
+/.git
