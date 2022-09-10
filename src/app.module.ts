@@ -4,10 +4,12 @@ import { ScheduleModule } from '@nestjs/schedule';
 import { NewsModule } from './news/news.module';
 import { CommonModule } from './common/common.module';
 import { SeedModule } from './seed/seed.module';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb://localhost:27017/nest-news'),
+    ConfigModule.forRoot(),
+    MongooseModule.forRoot(process.env.MONGODB),
     ScheduleModule.forRoot(),
     NewsModule,
     CommonModule,
