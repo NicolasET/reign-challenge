@@ -15,7 +15,7 @@ Reign challenge application.
 $ npm install
 ```
 
-## 2. Instaling Nest CLI
+## 2. Install Nest CLI (If you don't have it)
 
 ```bash
 $ npm install -g @nestjs/cli
@@ -29,12 +29,18 @@ $ npm install -g @nestjs/cli
 $ docker-compose --env-file .env up --build
 ```
 
-## Re-run container
+## Command to re-run container
 ```bash
 $ docker-compose --env-file .env up
 ```
 
-### Done, you can start making requests
+## 5. Import __*Postman Collection*__ 
+
+## 6. Add value to the variable (port)
+
+## 7. Execute query __*POPULATE DB*__ (Just the first time)
+
+### Done, you can start making requests 🎉🎉
 
 ## Support
 
